@@ -11,12 +11,12 @@
   <!-- 首页容器 -->
   <div class="home">
     <!-- 英雄区域：展示主标语和号召性用语 -->
-    <section class="hero">
+    <section class="hero" style="background-image: url('/images/hero-bg.jpg');">
       <div class="container">
-        <!-- 使用国际化文本 -->
-        <h1>{{ $t('home.welcome') }}</h1>
-        <p>{{ $t('home.subtitle') }}</p>
-        <router-link to="/products" class="btn">{{ $t('home.learnMore') }}</router-link>
+      <!-- 使用国际化文本 -->
+      <h1>{{ $t('home.welcome') }}</h1>
+      <p>{{ $t('home.subtitle') }}</p>
+      <router-link to="/products" class="btn">{{ $t('home.learnMore') }}</router-link>
       </div>
     </section>
     
