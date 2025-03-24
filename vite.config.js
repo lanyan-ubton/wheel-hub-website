@@ -45,6 +45,11 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           // 重写请求路径，移除 /api 前缀
           rewrite: (path) => path.replace(/^\/api/, '')
+        },
+        '/images': {
+          target: env.VITE_IMAGE_BASE_URL,
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/images/, '')
         }
       }
     }

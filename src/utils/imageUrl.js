@@ -3,9 +3,11 @@
  * @param {string} imagePath - 图片相对路径
  * @returns {string} 完整的图片URL
  */
+const baseUrl = import.meta.env.VITE_IMAGE_BASE_URL;
+
 export const getImageUrl = (imagePath) => {
   if (!imagePath) {
-    return 'http://192.168.1.200/images/product-placeholder.jpg';
+    return `${baseUrl}/images/product-placeholder.jpg`;
   }
 
   // 如果是完整URL，直接返回
@@ -14,5 +16,5 @@ export const getImageUrl = (imagePath) => {
   }
 
   // 使用配置的图片服务器地址
-  return `http://192.168.1.200${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
+  return `${baseUrl}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
 };
