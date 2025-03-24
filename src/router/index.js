@@ -42,7 +42,7 @@ const routes = [
     path: '/contact',    // 联系页路径
     name: 'Contact',     // 路由名称
     component: Contact,  // 联系页组件
-  },
+  }
 ]
 
 /**
@@ -61,6 +61,12 @@ const router = createRouter({
       return { top: 0 }
     }
   },
+})
+
+// 全局前置守卫
+router.beforeEach((to, from, next) => {
+  // 所有路由直接放行
+  next()
 })
 
 // 导出路由实例供 main.js 使用
